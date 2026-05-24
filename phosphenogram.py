@@ -1,3 +1,9 @@
+########Phosphenogram#########
+#To document percieved phosphenes
+# Remy Cohan; Github.CohanR.io
+# July 05, 2022
+##############################
+
 import matplotlib
 matplotlib.use('TkAgg')
 
@@ -14,7 +20,7 @@ from tkinter import Tk, Label, Frame, Toplevel, Entry, Button, StringVar, filedi
 from tkinter import ttk
 import ast
 
-# Function to calculate visual angle area
+# fx to calculate visual angle area
 def calculate_visual_angle_area(area_mm2, viewing_distance_mm):
     """Calculate the visual angle area in square degrees."""
     if area_mm2 <= 0:
@@ -24,7 +30,7 @@ def calculate_visual_angle_area(area_mm2, viewing_distance_mm):
     theta_deg = math.degrees(theta_rad)
     return theta_deg ** 2
 
-# Function to calculate visual angle perimeter
+# fx to calculate visual angle perimeter
 def calculate_visual_angle_perimeter(perimeter_mm, viewing_distance_mm):
     """Calculate the visual angle perimeter in degrees."""
     if perimeter_mm <= 0:
@@ -34,7 +40,7 @@ def calculate_visual_angle_perimeter(perimeter_mm, viewing_distance_mm):
     perimeter_deg = (perimeter_mm / viewing_distance_mm) * (180 / math.pi)
     return perimeter_deg
 
-# Function for drawing phosphenes
+# fx for drawing phosphenes
 def draw_phosphenes(WIDTH, HEIGHT, physical_width_mm, physical_height_mm, BRUSH_SIZE, SAVE_DIR, calculate_pixel_area, calculate_physical_area, VIEWING_DISTANCE_MM):
     BACKGROUND_COLOR = (34, 34, 34)
     DRAW_COLOR = (50, 50, 50)
@@ -44,11 +50,11 @@ def draw_phosphenes(WIDTH, HEIGHT, physical_width_mm, physical_height_mm, BRUSH_
     ppmm_x = WIDTH / physical_width_mm
     ppmm_y = HEIGHT / physical_height_mm
 
-    # Ensure the save directory exists
+    # make sure the save directory exists
     if not os.path.exists(SAVE_DIR):
         os.makedirs(SAVE_DIR)
 
-    # Initialize pygame and set up the display
+    # initialise pygame and set up the display
     pygame.init()
     display = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
 
@@ -174,11 +180,11 @@ def draw_phosphenes(WIDTH, HEIGHT, physical_width_mm, physical_height_mm, BRUSH_
 
     pygame.quit()  # Close the pygame window after exiting the loop
 
-# Function to plot phosphenes
+# fx to plot phosphenes
 def plot_phosphenes(file_path, plot_mode):
     data = pd.read_csv(file_path)
 
-    # Initialize the plot
+    # initialise the plot
     fig, ax = plt.subplots(figsize=(10, 8))
     ax.set_xlim(0, 800)  # Width of the drawing area
     ax.set_ylim(0, 600)  # Height of the drawing area
@@ -186,7 +192,7 @@ def plot_phosphenes(file_path, plot_mode):
     ax.set_facecolor((34/255, 34/255, 34/255))  # Set background color to match GUI
     ax.invert_yaxis()  # Matching pygame's coordinate system
 
-    # Function to plot each stroke based on its actual points
+    # fx to plot each stroke based on its actual points
     def plot_stroke(points, ax, value, unit):
         # Plot the actual polygon using the points
         polygon = plt.Polygon(points, closed=True, fill=None, edgecolor='r', linewidth=2)
@@ -196,7 +202,7 @@ def plot_phosphenes(file_path, plot_mode):
         centroid_y = sum([p[1] for p in points]) / len(points)
         ax.text(centroid_x, centroid_y, f"{value:.2f} {unit}", color='yellow', fontsize=10, ha='center')
 
-    # Iterate over the data and plot each shape
+    # iterate over the data and plot each shape
     for i, row in data.iterrows():
         points = ast.literal_eval(row['points'])
         if plot_mode == 'pixel':
@@ -212,14 +218,14 @@ def plot_phosphenes(file_path, plot_mode):
         elif plot_mode == 'peri_deg':
             plot_stroke(points, ax, row['perimeter_deg'], 'deg')
 
-    # Draw division lines
+    # draw division lines
     ax.axvline(400, color=(0, 0, 0), linewidth=2)  # Vertical center line
     ax.axhline(300, color=(0, 0, 0), linewidth=2)  # Horizontal center line
 
     plt.title(f"Reconstructed from the Saved CSV File (Plot Mode: {plot_mode.replace('_', ' ').capitalize()})")
     plt.show()
 
-# Main phosphenogram app
+# main phosphenogram app
 def open_draw_window():
     def start_drawing():
         width = int(width_var.get())

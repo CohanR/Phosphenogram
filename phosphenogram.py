@@ -2,7 +2,7 @@
 # To document percieved phosphenes
 # configurable drawing window with monitor parameters
 # you can inspect and plot data after they are saved 
-# Area or parameter in pixel, mm or visual angle
+# Area or perimeter in pixel, mm or visual angle
 # Remy Cohan; Github.CohanR.io
 # July 05, 2022
 ##############################

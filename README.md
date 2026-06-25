@@ -103,7 +103,7 @@ Add screenshots to a folder such as:
 docs/screenshots/
 ```
 
-Suggested files:
+files:
 
 ```text
 docs/screenshots/phosphenogram_interface.png
@@ -112,7 +112,6 @@ docs/screenshots/example_phosphene_output.png
 docs/screenshots/example_csv_output.png
 ```
 
-Then add or update the image blocks below.
 
 ### Interface
 

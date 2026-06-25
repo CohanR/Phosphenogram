@@ -82,7 +82,7 @@ def draw_phosphenes(WIDTH, HEIGHT, physical_width_mm, physical_height_mm, BRUSH_
         def calculate_area(self):
             """Calculates the area of the stroke in square pixels, square millimeters, and square degrees using the shoelace formula."""
             if len(self.points) < 3:
-                return 0, 0, 0  # Not enough points to form an area
+                return 0, 0, 0  # not enough points to form an area
 
             area_pixels = 0
             n = len(self.points)
@@ -110,13 +110,13 @@ def draw_phosphenes(WIDTH, HEIGHT, physical_width_mm, physical_height_mm, BRUSH_
                 x2, y2 = self.points[i + 1]
                 distance = math.hypot(x2 - x1, y2 - y1)
                 perimeter_pixels += distance
-            # Close the shape by adding the distance from the last point to the first
+            # close the shape by adding the distance from the last point to the first
             x1, y1 = self.points[-1]
             x2, y2 = self.points[0]
             perimeter_pixels += math.hypot(x2 - x1, y2 - y1)
-            # Convert to millimeters
+            # convert to millimeters
             perimeter_mm = perimeter_pixels / ((ppmm_x + ppmm_y) / 2)
-            # Calculate perimeter in visual degrees
+            # calculate perimeter in visual degrees
             perimeter_deg = calculate_visual_angle_perimeter(perimeter_mm, VIEWING_DISTANCE_MM)
 
             self.perimeter_px = perimeter_pixels
@@ -149,12 +149,12 @@ def draw_phosphenes(WIDTH, HEIGHT, physical_width_mm, physical_height_mm, BRUSH_
 
     strokes = []
     drawing = False
-    running = True  # Initialize the running flag
+    running = True  #iInitialise the running flag
 
-    while running:  # Use the running flag to control the loop
+    while running:  #uUse the running flag to control the loop
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                running = False  # Set running to False to exit the loop
+                running = False  # set running to False to exit the loop
             elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:  # Left click
                 drawing = True
                 strokes.append(Stroke(event.pos))
@@ -163,16 +163,16 @@ def draw_phosphenes(WIDTH, HEIGHT, physical_width_mm, physical_height_mm, BRUSH_
             elif event.type == pygame.MOUSEMOTION and drawing:
                 strokes[-1].add_point(event.pos)
             elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_s:  # Save drawing and strokes
+                if event.key == pygame.K_s:  # save drawing and strokes
                     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
                     save_drawing_and_strokes(strokes, timestamp)
-                    strokes.clear()  # Clear the list of strokes after saving
-                elif event.key == pygame.K_c:  # Clear the drawing
+                    strokes.clear()  # clear the list of strokes after saving
+                elif event.key == pygame.K_c:  # clear the drawing
                     display.fill(BACKGROUND_COLOR)
                     draw_division_lines()
-                    strokes.clear()  # Clear the list of strokes after clearing the screen
+                    strokes.clear()  # clear the list of strokes after clearing the screen
                 elif event.key == pygame.K_ESCAPE:  # Exit the drawing mode
-                    running = False  # Set running to False to exit the loop
+                    running = False  #set running to False to exit the loop
 
         display.fill(BACKGROUND_COLOR)
         draw_division_lines()
@@ -189,18 +189,18 @@ def plot_phosphenes(file_path, plot_mode):
 
     # initialise the plot
     fig, ax = plt.subplots(figsize=(10, 8))
-    ax.set_xlim(0, 800)  # Width of the drawing area
-    ax.set_ylim(0, 600)  # Height of the drawing area
+    ax.set_xlim(0, 800)  # width of the drawing area
+    ax.set_ylim(0, 600)  # height of the drawing area
     ax.set_aspect('equal')
-    ax.set_facecolor((34/255, 34/255, 34/255))  # Set background color to match GUI
-    ax.invert_yaxis()  # Matching pygame's coordinate system
+    ax.set_facecolor((34/255, 34/255, 34/255))  # set background color to match GUI
+    ax.invert_yaxis()  # matching pygame's coordinate system
 
     # fx to plot each stroke based on its actual points
     def plot_stroke(points, ax, value, unit):
-        # Plot the actual polygon using the points
+        # plot the actual polygon using the points
         polygon = plt.Polygon(points, closed=True, fill=None, edgecolor='r', linewidth=2)
         ax.add_patch(polygon)
-        # Label the value inside the polygon
+        # label the value inside the polygon
         centroid_x = sum([p[0] for p in points]) / len(points)
         centroid_y = sum([p[1] for p in points]) / len(points)
         ax.text(centroid_x, centroid_y, f"{value:.2f} {unit}", color='yellow', fontsize=10, ha='center')
@@ -222,8 +222,8 @@ def plot_phosphenes(file_path, plot_mode):
             plot_stroke(points, ax, row['perimeter_deg'], 'deg')
 
     # draw division lines
-    ax.axvline(400, color=(0, 0, 0), linewidth=2)  # Vertical center line
-    ax.axhline(300, color=(0, 0, 0), linewidth=2)  # Horizontal center line
+    ax.axvline(400, color=(0, 0, 0), linewidth=2)  # vertical center line
+    ax.axhline(300, color=(0, 0, 0), linewidth=2)  # horizontal center line
 
     plt.title(f"Reconstructed from the Saved CSV File (Plot Mode: {plot_mode.replace('_', ' ').capitalize()})")
     plt.show()
@@ -256,7 +256,7 @@ def open_draw_window():
     save_dir_var = StringVar(value=os.path.join(os.path.expanduser("~"), "drawn_PTs"))
     pixel_area_var = StringVar(value="True")
     physical_area_var = StringVar(value="True")
-    viewing_distance_var = StringVar(value="57")  # Default to 57 cm
+    viewing_distance_var = StringVar(value="57")  # default to 57 cm
 
     Label(draw_window, text="Width:").grid(row=0, column=0)
     Entry(draw_window, textvariable=width_var).grid(row=0, column=1)
@@ -301,7 +301,7 @@ def run_plot():
     if file_path:
         plot_phosphenes(file_path, plot_mode)
 
-    # Ensure the main window is visible again
+    # ensure the main window is visible again
     root.deiconify()
 
 def main():
@@ -328,7 +328,7 @@ def main():
                                       font=("Helvetica", 9), fg="#555555", bg="#f0f0f0")
     developer_info.pack(side="bottom", pady=10)
 
-    root.protocol("WM_DELETE_WINDOW", root.quit)  # Ensure proper termination
+    root.protocol("WM_DELETE_WINDOW", root.quit)  # ensure proper termination
 
     root.mainloop()
 

@@ -16,31 +16,9 @@
 
 The tool supports standardised documentation of perceived phosphene **location**, **shape**, and **size**. Participants report the perceived phosphene using a drawing interface, and the resulting output can be used to quantify phosphene size and spatial location in screen, physical, and visual-field coordinates.
 
----
+If you use this tool, please cite:
+Cohan, R., Moro, S. S., & Steeves, J. K. E. (2025). Quantifying phosphene size using MRI-guided transcranial magnetic stimulation to primary visual cortex. Journal of Vision, 25(9), 2652. https://doi.org/10.1167/jov.25.9.2652
 
-## Live tool
-
-The browser-based version can be launched here:
-
-<p align="center">
-  <a href="https://neuropsis.org/phosphenogram_web_v2.html">
-    <img width="340" src="https://img.shields.io/badge/Launch%20Phosphenogram-222222?style=for-the-badge&labelColor=222222&color=222222" alt="Launch Phosphenogram">
-  </a>
-</p>
-
-The tool runs directly in a modern web browser and does not require Python, Pygame, Tkinter, or local installation. Files are saved locally through the browser as downloads.
-
----
-
-## Related tool
-
-A browser-based NIfTI viewer and MRI visualisation tool is also available here:
-
-<p align="center">
-  <a href="https://neuropsis.org/">
-    <img width="340" src="https://img.shields.io/badge/Open%20NIfTI%20Viewer-6f42c1?style=for-the-badge&labelColor=6f42c1&color=6f42c1" alt="Open NIfTI Viewer">
-  </a>
-</p>
 
 ---
 

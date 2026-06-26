@@ -150,7 +150,7 @@ Additional scripts, example data, screenshots, and documentation may be added in
 
 ## Citation and use
 
-If using or adapting this tool, please cite the associated manuscript once available and acknowledge this repository.
+If using or adapting this tool, please cite and acknowledge:
 
 ```text
 Cohan, R., Moro, S. S., & Steeves, J. K. E. (2025). Quantifying phosphene size using MRI-guided transcranial magnetic stimulation to primary visual cortex. Journal of Vision, 25(9), 2652. https://doi.org/10.1167/jov.25.9.2652

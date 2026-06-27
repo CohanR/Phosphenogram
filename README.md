@@ -7,12 +7,10 @@
     <img width="340" src="https://img.shields.io/badge/Launch%20Phosphenogram-222222?style=for-the-badge&labelColor=222222&color=222222" alt="Launch Web-based Phosphenogram">
 </p>
 
-**Phosphenogram** is a computer-based phosphene documentation and quantification tool developed to record participant-reported transcranial magnetic stimulation (TMS)-induced phosphenes.
+**Phosphenogram** is a computer-based phosphene documentation and quantification tool developed to record participants' reported transcranial magnetic stimulation (TMS)-induced phosphenes. It supports standardised documentation of perceived phosphene **location**, **shape**, and **size**. Participants report the perceived phosphene using a drawing interface, and the resulting output can be used to quantify phosphene size and spatial location in screen, physical, and visual-field coordinates. The main application is Python-based and can be run as a script in your Mac terminal or you can use the above button and launch the web-based version. 
 
-The tool supports standardised documentation of perceived phosphene **location**, **shape**, and **size**. Participants report the perceived phosphene using a drawing interface, and the resulting output can be used to quantify phosphene size and spatial location in screen, physical, and visual-field coordinates.
+*The scripts have been tested and validated on Intel-based and silicon based Mac OS 13 or higher.
 
-If you use this tool, please cite:
-Cohan, R., Moro, S. S., & Steeves, J. K. E. (2025). Quantifying phosphene size using MRI-guided transcranial magnetic stimulation to primary visual cortex. Journal of Vision, 25(9), 2652. https://doi.org/10.1167/jov.25.9.2652
 
 
 ---

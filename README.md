@@ -42,6 +42,7 @@ Other non-pip installations:
 
 sudo apt install python3-tk
 ```
+---
 ## Browser version
 
 The browser version (simillar to the desktop version) allows users to configure:

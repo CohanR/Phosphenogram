@@ -47,17 +47,17 @@ sudo apt install python3-tk
 
 The browser version (simillar to the desktop version) allows users to configure:
 
-* drawing-window width and height;
-* physical monitor dimensions;
-* viewing distance;
-* brush size;
-* background colour;
-* uploaded still image or GIF background;
-* quadrant-line visibility;
-* quadrant-line colour, width, and opacity;
-* participant, session, and condition labels.
+* drawing window width and height
+* physical monitor dimensions
+* viewing distance
+* brush size
+* background colour
+* uploaded still image or GIF background (usefull if you are testing neurophtamological disorders e.g., Visual Snow syndrome or Charles Bonnet) 
+* quadrant line visibility
+* quadrant line colour, width, and opacity
+* participant, session, and condition labels
 
-The current browser version also includes fullscreen drawing mode so the participant can first enter the display parameters and then draw in a less distracting fullscreen interface.
+The current browser version also includes fullscreen drawing mode so the participant or resaercher can first enter the display parameters and then draw in a less distracting fullscreen interface.
 
 ---
 

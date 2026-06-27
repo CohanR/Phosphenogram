@@ -38,7 +38,7 @@ For the desktop Python version, download the `Phosphenogram.py` file from this r
 ```bash
 pip install pygame pandas matplotlib
 python3 Phosphenogram.py
-
+...
 ## Browser version
 
 The browser version allows users to configure:

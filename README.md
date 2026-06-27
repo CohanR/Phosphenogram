@@ -5,11 +5,6 @@
 <p align="center">
   <a href="https://neuropsis.org/phosphenogram_web_v2.html">
     <img width="340" src="https://img.shields.io/badge/Launch%20Phosphenogram-222222?style=for-the-badge&labelColor=222222&color=222222" alt="Launch Phosphenogram">
-  </a>
-  <br><br>
-  <a href="https://neuropsis.org/">
-    <img width="340" src="https://img.shields.io/badge/Open%20NIfTI%20Viewer-6f42c1?style=for-the-badge&labelColor=6f42c1&color=6f42c1" alt="Open NIfTI Viewer">
-  </a>
 </p>
 
 **Phosphenogram** is a computer-based phosphene documentation and quantification tool developed to record participant-reported transcranial magnetic stimulation (TMS)-induced phosphenes.
@@ -144,7 +139,7 @@ Potential use cases include:
 
 This repository contains materials for the Phosphenogram phosphene documentation and quantification tool. The browser-based version is designed for static web deployment and local PNG/CSV export.
 
-Additional scripts, example data, screenshots, and documentation may be added in later updates.
+Additional scripts, example data, screenshots, and documentation will be added in later updates.
 
 ---
 
@@ -162,6 +157,13 @@ Repository:
 https://github.com/CohanR/Phosphenogram
 ```
 
+Other tools:
+
+  </a>
+  <br><br>
+  <a href="https://neuropsis.org/">
+    <img width="340" src="https://img.shields.io/badge/Open%20NIfTI%20Viewer-6f42c1?style=for-the-badge&labelColor=6f42c1&color=6f42c1" alt="Open NIfTI Viewer">
+  </a>
 ---
 
 ## Versions

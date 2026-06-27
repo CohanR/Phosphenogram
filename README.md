@@ -11,8 +11,6 @@
 
 *The scripts have been tested and validated on Intel-based and silicon based Mac OS 13 or higher.
 
-
-
 ---
 
 ## Experimental context
@@ -33,7 +31,7 @@ In the associated study, participants kept their eyes closed during phosphene th
 
 ## Running the Python script locally
 
-For the desktop Python version, download the `Phosphenogram.py` file from this repository, install the required dependencies, and run it on your machine. For features see the web-based version description. 
+For the desktop Python version, download the `Phosphenogram.py` file from this repository, install the required dependencies, and run it on your machine. For the features see the browser version. 
 
 ```bash
 pip install pygame pandas matplotlib

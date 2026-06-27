@@ -42,7 +42,7 @@ Other non-pip installations:
 
 sudo apt install python3-tk
 ```
----
+
 ## Browser version
 
 The browser version (simillar to the desktop version) allows users to configure:
@@ -52,25 +52,25 @@ The browser version (simillar to the desktop version) allows users to configure:
 * viewing distance
 * brush size
 * background colour
-* uploaded still image or GIF background (usefull if you are assessing patients with neurophtalmological disorders e.g., Visual Snow syndrome or Charles Bonnet) 
+* uploaded still image or GIF background (usefull if you are assessing patients with neuro-ophtalmological disorders e.g., Visual Snow syndrome or Charles Bonnet) 
 * quadrant line visibility
 * quadrant line colour, width, and opacity
 * participant, session, and condition labels
 
 The current browser version also includes fullscreen drawing mode so the participant or resaercher can first enter the display parameters and then draw in a less distracting fullscreen interface.
 
----
+
 
 ## Output
 
 The tool records the participant drawing and generates:
 
 * a PNG image of the reported phosphene;
-* a comma-separated values file;
+* a comma separated values file;
 * x and y coordinates of the drawn polygon;
 * stroke start and end coordinates;
-* bounding-box dimensions;
-* size metrics in pixels, physical units, and visual-angle units;
+* bounding box dimensions;
+* size metrics in pixels, physical units, and visual angle units;
 * area estimates in px², mm², and deg²;
 * perimeter estimates in px, mm, and degrees.
 
@@ -136,9 +136,10 @@ Phosphenogram was developed for perceptual neuroscience and visual cortex stimul
 
 Potential use cases include:
 
-* TMS-induced phosphene mapping;
+* TMS-evoked phosphene mapping;
 * phosphene threshold experiments;
-* visual cortex stimulation protocols;
+* invasive and non-invasive visual cortex stimulation protocols;
+* assessing patients with neuro-ophtalmological disorders e.g., Visual Snow Syndrome or Charles Bonnet
 * eyes-open versus eyes-closed phosphene documentation;
 * retinotopic localisation workflows;
 * reproducible reporting of subjective visual percepts.

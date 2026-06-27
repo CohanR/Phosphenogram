@@ -162,7 +162,7 @@ Other tools:
   <a href="https://neuropsis.org/">
     <img width="340" src="https://img.shields.io/badge/Open%20NIfTI%20Viewer-6f42c1?style=for-the-badge&labelColor=6f42c1&color=6f42c1" alt="Open NIfTI Viewer">
   </a>
----
+
 
 ## Versions
 

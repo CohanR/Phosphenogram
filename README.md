@@ -33,15 +33,19 @@ In the associated study, participants kept their eyes closed during phosphene th
 
 ## Running the Python script locally
 
-For the desktop Python version, download the `Phosphenogram.py` file from this repository, install the required dependencies, and run it on your machine.
+For the desktop Python version, download the `Phosphenogram.py` file from this repository, install the required dependencies, and run it on your machine. For features see the web-based version description. 
 
 ```bash
 pip install pygame pandas matplotlib
 python3 Phosphenogram.py
+
+Other non-pip installations:
+
+sudo apt install python3-tk
 ```
 ## Browser version
 
-The browser version allows users to configure:
+The browser version (simillar to the desktop version) allows users to configure:
 
 * drawing-window width and height;
 * physical monitor dimensions;

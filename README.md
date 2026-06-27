@@ -156,7 +156,7 @@ Additional scripts, example data, screenshots, and documentation will be added i
 
 ## Citation and use
 
-If using or adapting this tool, please cite and acknowledge (the main manuscript including the effects of eye state on PTs and phosphene size have been submitted and will be added when published):
+If using or adapting this tool, please cite and acknowledge (the main manuscript including the effects of eye state on PTs and phosphene size has been submitted and will be added when published):
 
 ```text
 Cohan, R., Moro, S. S., & Steeves, J. K. E. (2025). Quantifying phosphene size using MRI-guided transcranial magnetic stimulation to primary visual cortex. Journal of Vision, 25(9), 2652. https://doi.org/10.1167/jov.25.9.2652

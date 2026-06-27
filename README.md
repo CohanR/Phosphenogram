@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://neuropsis.org/phosphenogram_web_v2.html">
-    <img width="340" src="https://img.shields.io/badge/Launch%20Phosphenogram-222222?style=for-the-badge&labelColor=222222&color=222222" alt="Launch Phosphenogram">
+    <img width="340" src="https://img.shields.io/badge/Launch%20Phosphenogram-222222?style=for-the-badge&labelColor=222222&color=222222" alt="Launch Web-based Phosphenogram">
 </p>
 
 **Phosphenogram** is a computer-based phosphene documentation and quantification tool developed to record participant-reported transcranial magnetic stimulation (TMS)-induced phosphenes.

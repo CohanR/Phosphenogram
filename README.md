@@ -52,7 +52,7 @@ The browser version (simillar to the desktop version) allows users to configure:
 * viewing distance
 * brush size
 * background colour
-* uploaded still image or GIF background (usefull if you are testing neurophtamological disorders e.g., Visual Snow syndrome or Charles Bonnet) 
+* uploaded still image or GIF background (usefull if you are testing neurophtalmological disorders e.g., Visual Snow syndrome or Charles Bonnet) 
 * quadrant line visibility
 * quadrant line colour, width, and opacity
 * participant, session, and condition labels

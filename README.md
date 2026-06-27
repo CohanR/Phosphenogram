@@ -31,6 +31,14 @@ In the associated study, participants kept their eyes closed during phosphene th
 
 ---
 
+## Running the Python script locally
+
+For the desktop Python version, download the `Phosphenogram.py` file from this repository, install the required dependencies, and run it on your machine.
+
+```bash
+pip install pygame pandas matplotlib
+python3 Phosphenogram.py
+
 ## Browser version
 
 The browser version allows users to configure:
